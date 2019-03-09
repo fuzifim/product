@@ -67,38 +67,44 @@ class IndexController extends Controller
                     ]
                 );
                 $responseDecode=json_decode($response->getBody()->getContents());
-                foreach($responseDecode->data as $campaign){
-                    $checkProduct=DB::table('products')
-                        ->where('base_64',base64_encode($campaign->name))
-                        ->where('domain',$getJob->domain)->first();
-                    if(empty($checkProduct->title)){
-                        if(!empty($campaign->cate)){
-                            $category=str_replace('-', ' ', $campaign->cate);
-                        }else{
-                            $category='';
+                if($responseDecode->data>0){
+                    foreach($responseDecode->data as $campaign){
+                        $checkProduct=DB::table('products')
+                            ->where('base_64',base64_encode($campaign->name))
+                            ->where('domain',$getJob->domain)->first();
+                        if(empty($checkProduct->title)){
+                            if(!empty($campaign->cate)){
+                                $category=str_replace('-', ' ', $campaign->cate);
+                            }else{
+                                $category='';
+                            }
+                            DB::table('products')->insert(
+                                [
+                                    'product_id' => $campaign->product_id,
+                                    'title' => $campaign->name,
+                                    'base_64'=>base64_encode($campaign->name),
+                                    'description'=>$campaign->desc,
+                                    'category'=>$category,
+                                    'sku'=>$campaign->sku,
+                                    'price'=>$campaign->price,
+                                    'discount'=>$campaign->discount,
+                                    'img_thumb'=>$campaign->image,
+                                    'url'=>$campaign->url,
+                                    'deeplink'=>$campaign->aff_link,
+                                    'domain'=>$getJob->domain,
+                                    'ads'=>'active',
+                                    'status'=>'active',
+                                    'created_at'=>Carbon::now()->format('Y-m-d H:i:s'),
+                                    'updated_at'=>Carbon::now()->format('Y-m-d H:i:s')
+                                ]
+                            );
+                            echo $campaign->name.'<p>';
                         }
-                        DB::table('products')->insert(
-                            [
-                                'product_id' => $campaign->product_id,
-                                'title' => $campaign->name,
-                                'base_64'=>base64_encode($campaign->name),
-                                'description'=>$campaign->desc,
-                                'category'=>$category,
-                                'sku'=>$campaign->sku,
-                                'price'=>$campaign->price,
-                                'discount'=>$campaign->discount,
-                                'img_thumb'=>$campaign->image,
-                                'url'=>$campaign->url,
-                                'deeplink'=>$campaign->aff_link,
-                                'domain'=>$getJob->domain,
-                                'ads'=>'active',
-                                'status'=>'active',
-                                'created_at'=>Carbon::now()->format('Y-m-d H:i:s'),
-                                'updated_at'=>Carbon::now()->format('Y-m-d H:i:s')
-                            ]
-                        );
-                        echo $campaign->name.'<p>';
                     }
+                }else{
+                    DB::table('site_url')
+                        ->where('id', $getJob->id)
+                        ->update(['status' => 'disable']);
                 }
             }
         }catch (\GuzzleHttp\Exception\ServerException $e){
@@ -136,7 +142,7 @@ class IndexController extends Controller
             $responseDecode=json_decode($response->getBody()->getContents(),true);
             if(is_array($responseDecode)){
                 $checkJob=DB::table('site_url')->where('domain',$domain)->first();
-                if(empty($checkJob->domain)){
+                if(empty($checkJob->domain) && $responseDecode['total']>0){
                     $limitPage=(int)($responseDecode['total']/50);
                     DB::table('site_url')->insert([
                         [
