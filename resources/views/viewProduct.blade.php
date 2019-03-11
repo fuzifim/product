@@ -68,9 +68,11 @@
                 @if(count($listNew)>0)
                     <ul class="list-group">
                         @foreach($listNew as $item)
+                            @if(!empty($item->title))
                             <li class="list-group-item">
                                 <h3><a href="{!! route('view.product',array($item->id,str_slug($item->title))) !!}">{!! $item->title !!}</a></h3>
                             </li>
+                            @endif
                         @endforeach
                     </ul>
                 @endif
