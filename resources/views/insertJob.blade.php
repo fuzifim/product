@@ -20,7 +20,14 @@
                 </form>
             </div>
             <div class="col-md-4">
-
+                <ul class="list-group">
+                    @foreach($getSite as $item)
+                        <li class="list-group-item">
+                            <p>{!! $item->domain !!} - page: {!! $item->page !!} - limit page: {!! $item->limit_page !!}</p>
+                            <p>total: {!! $item->total !!} - Status: {!! $item->status !!}</p>
+                        </li>
+                    @endforeach
+                </ul>
             </div>
         </div>
     </div>

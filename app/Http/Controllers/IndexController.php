@@ -120,7 +120,10 @@ class IndexController extends Controller
         }
     }
     public function insertJob(){
-        return view('insertJob',array());
+        $getSite=DB::table('site_url')->simplePaginate(20);
+        return view('insertJob',array(
+            'getSite'=>$getSite
+        ));
     }
     public function insertJobSave(Request $request){
         $domain=$request->input('domain');
