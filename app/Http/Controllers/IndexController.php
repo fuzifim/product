@@ -106,6 +106,10 @@ class IndexController extends Controller
                         ->where('id', $getJob->id)
                         ->update(['status' => 'disable']);
                 }
+            }else if($getJob->page > $getJob->limit_page){
+                DB::table('site_url')
+                    ->where('id', $getJob->id)
+                    ->update(['status' => 'disable']);
             }
         }catch (\GuzzleHttp\Exception\ServerException $e){
             return 'false';
