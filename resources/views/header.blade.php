@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarsExample02">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="{!! route('home') !!}">Danh sách sản phẩm</a>
+                <a class="nav-link" href="{!! route('home') !!}">Sản phẩm</a>
             </li>
         </ul>
     </div>
