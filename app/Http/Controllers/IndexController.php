@@ -16,11 +16,7 @@ class IndexController extends Controller
     public function __construct(){
     }
     public function index(Request $request){
-        $page = $request->has('page') ? $request->query('page') : 1;
-        $listProduct = Cache::store('memcached')->remember('listProduct_page_'.$page,1, function()
-        {
-            return DB::table('products')->where('status','active')->orderBy('updated_at','desc')->simplePaginate(20);
-        });
+        $listProduct = DB::table('products')->where('status','active')->orderBy('updated_at','desc')->simplePaginate(20);
         return view('index',array(
             'listProduct'=>$listProduct
         ));
@@ -28,16 +24,10 @@ class IndexController extends Controller
     public function viewProduct(Request $request){
         $id = $request->route('id');
         if(!empty($id)){
-            $getProduct = Cache::store('memcached')->remember('product_'.$id,1, function() use($id)
-            {
-                return DB::table('products')->where('id',$id)
-                    ->where('status','active')
-                    ->first();
-            });
-            $listNew = Cache::store('memcached')->remember('listNew',1, function()
-            {
-                return DB::table('products')->where('status','active')->orderBy('updated_at','desc')->take(20)->get();
-            });
+            $getProduct = DB::table('products')->where('id',$id)
+                ->where('status','active')
+                ->first();
+            $listNew = DB::table('products')->where('status','active')->orderBy('updated_at','desc')->take(20)->get();
             if(!empty($getProduct->title)){
                 return view('viewProduct',array(
                     'product'=>$getProduct,
