@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="_token" content="{{ csrf_token() }}">
     <meta name="description" content="@yield('description')">
-    <meta name="google-site-verification" content="1vCnzxB3YhO_OfTffci7DZWSdxsnt7YGzgRvZiqtZUs" />
+    <meta name="google-site-verification" content="yH1kvcwiqrV3jl6g4oB2zO4L1uzaLF0zjcncT6y9ysw" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>@yield('title')</title>
