@@ -5,42 +5,24 @@
     @include('header')
 @endsection
 @section('content')
-    @if($product->ads=='active')
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({
-                google_ad_client: "ca-pub-6739685874678212",
-                enable_page_level_ads: true
-            });
-        </script>
-    @endif
     <div class="container">
         <div class="row mt-2">
             <div class="col-md-8">
                 <h1>{!! $product->title !!}</h1>
                 <small>Updated at: {!! $product->updated_at !!}</small>
-                <div class="form-group mt-2">
-                    <div class="alert alert-info p-2">
-                        <strong>Cung Cấp đến mọi người ⭐ ⭐ ⭐ ⭐ ⭐</strong>
-                        <p>Đăng tin lên Cung Cấp để cung cấp sản phẩm, dịch vụ kinh doanh đến mọi người hoàn toàn miễn phí! </p>
-                    </div>
-                    <div class="btn-group d-flex" role="group"><a class="btn btn-success w-100" href="https://cungcap.net" target="_blank"><h4>Đăng tin miễn phí</h4></a></div>
-                </div>
-                <div class="form-group mt-2">
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-client="ca-pub-6739685874678212"
-                         data-ad-slot="7536384219"
-                         data-ad-format="auto"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
                 @if(!empty($product->img_thumb))
                     <div class="form-group mt-2 text-center">
                         <img class="img-fluid" src="{!! $product->img_thumb !!}">
                     </div>
                 @endif
+
+                <div class="form-group mt-2">
+                    <div class="btn-group d-flex" role="group">
+                        <a class="btn btn-danger w-100" href="{{ route('go.to',['url'=>urlencode($product->deeplink)]) }}" rel="nofollow" target="_blank">
+                            <h4>Đến nhà cung cấp</h4>
+                        </a>
+                    </div>
+                </div>
                 <div class="form-group mt-2">
                     <p>Tên sản phẩm: <strong>{!! $product->title !!}</strong></p>
                     <p><strong>ID sản phẩm: </strong>{!! $product->product_id !!}</p>
@@ -55,16 +37,6 @@
             </div>
             <div class="col-md-4">
                 <h4>List new product</h4>
-                <div class="form-group mt-2">
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-client="ca-pub-6739685874678212"
-                         data-ad-slot="7536384219"
-                         data-ad-format="auto"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
                 @if(count($listNew)>0)
                     <ul class="list-group">
                         @foreach($listNew as $item)

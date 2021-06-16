@@ -21,3 +21,7 @@ Route::get('/newJob', ['as' => 'new.job',
     'uses' => 'IndexController@insertJob']);
 Route::post('/newJob', ['as' => 'new.job',
     'uses' => 'IndexController@insertJobSave']);
+
+Route::get('/goTo/{url}', array(
+    'as' => 'go.to',
+    'uses' => 'PageController@goToUrl'))->where('url', '.*');
