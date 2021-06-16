@@ -39,10 +39,6 @@ class IndexController extends Controller
     public function getProduct(){
         try {
             $client = new Client([
-                'headers' => [
-                    'Content-Type' => 'text/html',
-                    'User-Agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36'
-                ],
                 'connect_timeout' => '50',
                 'timeout' => '50'
             ]);
@@ -51,9 +47,12 @@ class IndexController extends Controller
                 DB::table('site_url')
                     ->where('id', $getJob->id)
                     ->update(['page' => $getJob->page+1]);
-                $response = $client->request('GET', 'https://api.accesstrade.vn/v1/datafeeds?domain='.$getJob->domain.'&page='.$getJob->page,
+                $response = $client->request('GET', 'https://api.accesstrade.vn/v1/datafeeds?limit=20&campaign=shopee&domain=shopee.vn',
                     [
-                        'headers' => [ 'Content-Type' => 'application/json','Authorization' => 'Token krkREE14smW4HEm9_7aGbcYHOCmFSdxs']
+                        'headers' => [
+                            'Content-Type' => 'application/json',
+                            'Authorization' => 'Token krkREE14smW4HEm9_7aGbcYHOCmFSdxs'
+                        ]
                     ]
                 );
                 $responseDecode=json_decode($response->getBody()->getContents());
