@@ -15,7 +15,7 @@ class ChangeTextColumnUrlTableProducts extends Migration
     {
         Schema::table('products', function(Blueprint $table)
         {
-            $table->text('url')->change();
+            $table->text('url')->nullable()->change();
         });
     }
 
@@ -27,7 +27,7 @@ class ChangeTextColumnUrlTableProducts extends Migration
     public function down()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->string('url',500)->change();
+            $table->string('url',500)->nullable()->change();
         });
     }
 }
