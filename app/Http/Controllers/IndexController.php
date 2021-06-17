@@ -62,7 +62,7 @@ class IndexController extends Controller
                     foreach($responseDecode->data as $campaign){
                         $name = Str::limit($campaign->name,250);
                         $checkProduct=DB::table('products')
-                            ->where('base_64',base64_encode($name))
+                            ->where('product_id',$campaign->product_id)
                             ->where('domain',$getJob->domain)->first();
                         if(empty($checkProduct->title)){
                             if(!empty($campaign->cate)){
@@ -74,7 +74,7 @@ class IndexController extends Controller
                                 [
                                     'product_id' => $campaign->product_id,
                                     'title' => $name,
-                                    'base_64'=>base64_encode($name),
+                                    'base_64'=>'',
                                     'description'=>$campaign->desc,
                                     'category'=>$category,
                                     'sku'=>$campaign->sku,
