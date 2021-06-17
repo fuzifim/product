@@ -9,8 +9,9 @@ use Cache;
 use Carbon\Carbon;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
+use Illuminate\Support\Str;
 use Redirect;
-use DB;
+use \Illuminate\Support\Facades\DB;
 class IndexController extends Controller
 {
     public function __construct(){
@@ -38,6 +39,7 @@ class IndexController extends Controller
     }
     public function getProduct(){
         try {
+            DB::beginTransaction();
             $client = new Client([
                 'connect_timeout' => '50',
                 'timeout' => '50'
@@ -58,8 +60,9 @@ class IndexController extends Controller
                 $responseDecode=json_decode($response->getBody()->getContents());
                 if($responseDecode->data>0){
                     foreach($responseDecode->data as $campaign){
+                        $name = Str::limit($campaign->name,250);
                         $checkProduct=DB::table('products')
-                            ->where('base_64',base64_encode($campaign->name))
+                            ->where('base_64',base64_encode($name))
                             ->where('domain',$getJob->domain)->first();
                         if(empty($checkProduct->title)){
                             if(!empty($campaign->cate)){
@@ -70,8 +73,8 @@ class IndexController extends Controller
                             DB::table('products')->insert(
                                 [
                                     'product_id' => $campaign->product_id,
-                                    'title' => $campaign->name,
-                                    'base_64'=>base64_encode($campaign->name),
+                                    'title' => $name,
+                                    'base_64'=>base64_encode($name),
                                     'description'=>$campaign->desc,
                                     'category'=>$category,
                                     'sku'=>$campaign->sku,
@@ -87,7 +90,7 @@ class IndexController extends Controller
                                     'updated_at'=>Carbon::now()->format('Y-m-d H:i:s')
                                 ]
                             );
-                            echo $campaign->name.'<p>';
+                            echo $name.'<p>';
                         }
                     }
                 }else{
@@ -100,15 +103,21 @@ class IndexController extends Controller
                     ->where('id', $getJob->id)
                     ->update(['status' => 'disable']);
             }
+            DB::commit();
         }catch (\GuzzleHttp\Exception\ServerException $e){
+            DB::rollBack();
             return 'false';
         }catch (\GuzzleHttp\Exception\BadResponseException $e){
+            DB::rollBack();
             return 'false';
         }catch (\GuzzleHttp\Exception\ClientException $e){
+            DB::rollBack();
             return 'false';
         }catch (\GuzzleHttp\Exception\ConnectException $e){
+            DB::rollBack();
             return 'false';
         }catch (\GuzzleHttp\Exception\RequestException $e){
+            DB::rollBack();
             return 'false';
         }
     }
