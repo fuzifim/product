@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee41c56c-023c-42d6-a197-4b25f8e1c0ad" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_06_17_071738_change_text_column_url_table_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_06_17_071738_change_text_column_url_table_products.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -155,7 +154,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1623809801751</updated>
-      <workItem from="1623809802977" duration="8620000" />
+      <workItem from="1623809802977" duration="8856000" />
     </task>
     <servers />
   </component>
