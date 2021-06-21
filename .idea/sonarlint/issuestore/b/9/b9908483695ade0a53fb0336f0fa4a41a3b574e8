@@ -1,0 +1,8 @@
+
+J	php:S2000"0Remove the extra characters before the open tag.(Áåôáùÿÿÿÿ
+|	Web:S1829"gReplace this absolute URI "src" with a relative one, or move this absolute URI to a configuration file.(ÑâÒ”
+GWeb:ImgWithoutAltCheck"%Add an "alt" attribute to this image.(ÑâÒ”
+_php:S103"KSplit this 190 characters long line (which is greater than 120 authorized).(¯¹Êþ
+f Web:ImgWithoutWidthOrHeightCheck":Add both a 'width' and a 'height' attribute to this image.(ÑâÒ”
+3	php:S1451"&Add or update the header of this file.
+mWeb:MaxLineLengthCheck"KSplit this 190 characters long line (which is greater than 120 authorized).(¯¹Êþ

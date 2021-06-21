@@ -1,0 +1,10 @@
+
+lWeb:MaxLineLengthCheck-"KSplit this 145 characters long line (which is greater than 120 authorized).(¥Ò²o
+k Web:ImgWithoutWidthOrHeightCheck":Add both a 'width' and a 'height' attribute to this image.(éÒÛ¦þÿÿÿÿ
+^php:S103-"KSplit this 145 characters long line (which is greater than 120 authorized).(¥Ò²o
+D	php:S2000"0Remove the extra characters before the open tag.(–‘àf
+LWeb:ImgWithoutAltCheck"%Add an "alt" attribute to this image.(éÒÛ¦þÿÿÿÿ
+fphp:S103"KSplit this 154 characters long line (which is greater than 120 authorized).(²Äê›8Š„àŸ¡/
+3	php:S1451"&Add or update the header of this file.
+>Web:NonConsecutiveHeadingCheck-"Do not skip level H2.(¥Ò²o
+tWeb:MaxLineLengthCheck"KSplit this 154 characters long line (which is greater than 120 authorized).(²Äê›8Š„àŸ¡/

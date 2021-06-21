@@ -106,19 +106,19 @@ class IndexController extends Controller
             DB::commit();
         }catch (\GuzzleHttp\Exception\ServerException $e){
             DB::rollBack();
-            return 'false';
+            return $e->getMessage();
         }catch (\GuzzleHttp\Exception\BadResponseException $e){
             DB::rollBack();
-            return 'false';
+            return $e->getMessage();
         }catch (\GuzzleHttp\Exception\ClientException $e){
             DB::rollBack();
-            return 'false';
+            return $e->getMessage();
         }catch (\GuzzleHttp\Exception\ConnectException $e){
             DB::rollBack();
-            return 'false';
+            return $e->getMessage();
         }catch (\GuzzleHttp\Exception\RequestException $e){
             DB::rollBack();
-            return 'false';
+            return $e->getMessage();
         }
     }
     public function insertJob(){

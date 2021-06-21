@@ -1,0 +1,20 @@
+
+	Web:S1829"gReplace this absolute URI "src" with a relative one, or move this absolute URI to a configuration file.(À²Ìÿÿÿÿÿ
+‚	Web:S1829"hReplace this absolute URI "href" with a relative one, or move this absolute URI to a configuration file.(¯€„ùÿÿÿÿ
+mWeb:MaxLineLengthCheck!"KSplit this 199 characters long line (which is greater than 120 authorized).(ºü¾¸
+|	Web:S1829 "gReplace this absolute URI "src" with a relative one, or move this absolute URI to a configuration file.(øˆÄÒ
+fWeb:LongJavaScriptCheck%">The length of this JS script (6) exceeds the maximum set to 5.(İĞ¥úÿÿÿÿ
+rWeb:MaxLineLengthCheck"KSplit this 180 characters long line (which is greater than 120 authorized).(À²Ìÿÿÿÿÿ
+	Web:S1829$"gReplace this absolute URI "src" with a relative one, or move this absolute URI to a configuration file.(ÏÕ££ûÿÿÿÿ
+J	php:S2000"0Remove the extra characters before the open tag.(Ã†¦¡ıÿÿÿÿ
+mWeb:MaxLineLengthCheck "KSplit this 205 characters long line (which is greater than 120 authorized).(øˆÄÒ
+WWeb:PageWithoutFaviconCheck"1Add a 'favicon' declaration in this 'header' tag.(Õ¶¯M
+dphp:S103"KSplit this 180 characters long line (which is greater than 120 authorized).(À²Ìÿÿÿÿÿ
+_php:S103!"KSplit this 199 characters long line (which is greater than 120 authorized).(ºü¾¸
+_php:S103 "KSplit this 205 characters long line (which is greater than 120 authorized).(øˆÄÒ
+|	Web:S1829!"gReplace this absolute URI "src" with a relative one, or move this absolute URI to a configuration file.(ºü¾¸
+	Web:S1829"gReplace this absolute URI "src" with a relative one, or move this absolute URI to a configuration file.(–ÈöËøÿÿÿÿ
+rWeb:MaxLineLengthCheck"KSplit this 212 characters long line (which is greater than 120 authorized).(¯€„ùÿÿÿÿ
+3	php:S1451"&Add or update the header of this file.
+„	Web:S1829"hReplace this absolute URI "href" with a relative one, or move this absolute URI to a configuration file.(Êø…Ú8–â’—¡/
+dphp:S103"KSplit this 212 characters long line (which is greater than 120 authorized).(¯€„ùÿÿÿÿ

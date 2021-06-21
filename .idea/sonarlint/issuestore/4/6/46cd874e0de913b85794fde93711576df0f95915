@@ -1,0 +1,46 @@
+
+N	php:S1106="9Move this open curly brace to the beginning of next line.(ı»µŠ
+nWeb:MaxLineLengthCheckˆ"KSplit this 134 characters long line (which is greater than 120 authorized).(ÔÚ•±
+S	php:S1106q"9Move this open curly brace to the beginning of next line.(Ãƒçÿÿÿÿÿ
+S	php:S1106D"9Move this open curly brace to the beginning of next line.(åĞæÁüÿÿÿÿ
+†	php:S1186"lAdd a nested comment explaining why this method is empty, throw an Exception or complete the implementation.(éúÜÅûÿÿÿÿ
+nWeb:MaxLineLengthCheck"KSplit this 121 characters long line (which is greater than 120 authorized).(‘Á–
+N	php:S1106F"9Move this open curly brace to the beginning of next line.(å¥‡
+`php:S103ˆ"KSplit this 134 characters long line (which is greater than 120 authorized).(ÔÚ•±
+N	php:S1106`"9Move this open curly brace to the beginning of next line.(å¥‡
+O	php:S1106"9Move this open curly brace to the beginning of next line.( ÆÓ
+Q	php:S1142("<This method has 5 returns, which is more than the 3 allowed.(÷Ú¢
+O	php:S1106§"9Move this open curly brace to the beginning of next line.(å¥‡
+dphp:S103"KSplit this 121 characters long line (which is greater than 120 authorized).(¤• ‘üÿÿÿÿ
+mWeb:MaxLineLengthCheck4"KSplit this 136 characters long line (which is greater than 120 authorized).(Üóš
+a	php:S1192Y"LDefine a constant instead of duplicating this literal "Y-m-d H:i:s" 4 times.(×ê‘‘
+N	php:S1106"9Move this open curly brace to the beginning of next line.(¦‹—¸
+N	php:S1106C"9Move this open curly brace to the beginning of next line.(»ˆí¾
+S	php:S11060"9Move this open curly brace to the beginning of next line.(Ò´âôıÿÿÿÿ
+U	php:S1105";Move this open curly brace to the end of the previous line.(ÒÌâ–øÿÿÿÿ
+S	php:S1106n"9Move this open curly brace to the beginning of next line.(¹ü˜áûÿÿÿÿ
+_php:S1034"KSplit this 136 characters long line (which is greater than 120 authorized).(Üóš
+N	php:S1106>"9Move this open curly brace to the beginning of next line.(ÕÊø…
+S	php:S1106"9Move this open curly brace to the beginning of next line.(®ƒ¹§ÿÿÿÿÿ
+sWeb:MaxLineLengthCheck"KSplit this 132 characters long line (which is greater than 120 authorized).(ç‚¹µşÿÿÿÿ
+sphp:S134C"_Refactor this code to not nest more than 4 "if", "for", "while", "switch" and "try" statements.(»ˆí¾
+rWeb:MaxLineLengthCheck"KSplit this 121 characters long line (which is greater than 120 authorized).(¤• ‘üÿÿÿÿ
+N	php:S1106w"9Move this open curly brace to the beginning of next line.(±§ø»
+N	php:S1106("9Move this open curly brace to the beginning of next line.(÷Ú¢
+2php:S126e"Add the missing "else" clause.(”‡¨î
+S	php:S1106"9Move this open curly brace to the beginning of next line.(éúÜÅûÿÿÿÿ
+S	php:S1106|"9Move this open curly brace to the beginning of next line.(Ø›¬Õùÿÿÿÿ
+T	php:S1106”"9Move this open curly brace to the beginning of next line.(ñÏé¥ıÿÿÿÿ
+T	php:S1106‚"9Move this open curly brace to the beginning of next line.(Ù¿Âµÿÿÿÿÿ
+O	php:S1106­"9Move this open curly brace to the beginning of next line.(å¥‡
+O	php:S1106–"9Move this open curly brace to the beginning of next line.(ÏŒÍÎ
+Q	php:S1793e"<Replace this "else if" keyword sequence by "elseif" keyword.(”‡¨î
+M	php:S1106 "9Move this open curly brace to the beginning of next line.(•¹Ê
+ephp:S103"KSplit this 132 characters long line (which is greater than 120 authorized).(ç‚¹µşÿÿÿÿ
+S	php:S1106t"9Move this open curly brace to the beginning of next line.(ƒ¹ÿòøÿÿÿÿ
+`php:S103"KSplit this 121 characters long line (which is greater than 120 authorized).(‘Á–
+i	php:S3776("TRefactor this function to reduce its Cognitive Complexity from 24 to the 15 allowed.(÷Ú¢
+N	php:S1106"9Move this open curly brace to the beginning of next line.(üøõõ
+S	php:S1106)"9Move this open curly brace to the beginning of next line.(¡»¢üùÿÿÿÿ
+N	php:S1106e"9Move this open curly brace to the beginning of next line.(”‡¨î
+N	php:S1106k"9Move this open curly brace to the beginning of next line.(Ñºæ‹

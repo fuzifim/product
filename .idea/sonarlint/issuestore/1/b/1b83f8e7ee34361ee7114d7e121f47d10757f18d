@@ -1,0 +1,22 @@
+
+mWeb:MaxLineLengthCheck"KSplit this 135 characters long line (which is greater than 120 authorized).(´‘ˆñ
+‚	Web:S1829"hReplace this absolute URI "href" with a relative one, or move this absolute URI to a configuration file.(ë‚Úûÿÿÿÿ
+bWeb:LongJavaScriptCheck"?The length of this JS script (15) exceeds the maximum set to 5.(œµù“
+dphp:S103"KSplit this 215 characters long line (which is greater than 120 authorized).(ë‚Úûÿÿÿÿ
+1	php:S1997"$Remove the inline HTML in this file.
+WWeb:PageWithoutFaviconCheck"1Add a 'favicon' declaration in this 'header' tag.(Õ¶¯M
+mWeb:MaxLineLengthCheck"KSplit this 206 characters long line (which is greater than 120 authorized).(øûî«
+:	php:S2007" Move this variable into a class.(†¢¢¡ÿÿÿÿÿ
+_php:S103"KSplit this 206 characters long line (which is greater than 120 authorized).(øûî«
+Z	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(œ÷Ãûÿÿÿÿ
+	Web:S1829"gReplace this absolute URI "src" with a relative one, or move this absolute URI to a configuration file.(³ù¤üÿÿÿÿ
+3	php:S1451"&Add or update the header of this file.
+rWeb:MaxLineLengthCheck"KSplit this 129 characters long line (which is greater than 120 authorized).(‰Ÿòüÿÿÿÿ
+rWeb:MaxLineLengthCheck"KSplit this 132 characters long line (which is greater than 120 authorized).(ÆÆ…¹üÿÿÿÿ
+_php:S103"KSplit this 135 characters long line (which is greater than 120 authorized).(´‘ˆñ
+dphp:S103"KSplit this 129 characters long line (which is greater than 120 authorized).(‰Ÿòüÿÿÿÿ
+rWeb:MaxLineLengthCheck"KSplit this 215 characters long line (which is greater than 120 authorized).(ë‚Úûÿÿÿÿ
+dphp:S103"KSplit this 132 characters long line (which is greater than 120 authorized).(ÆÆ…¹üÿÿÿÿ
+|	Web:S1829"gReplace this absolute URI "src" with a relative one, or move this absolute URI to a configuration file.(øûî«
+tWeb:MaxLineLengthCheck"KSplit this 164 characters long line (which is greater than 120 authorized).(×§ï8Ù®ÃŸ¡/
+fphp:S103"KSplit this 164 characters long line (which is greater than 120 authorized).(×§ï8Ù®ÃŸ¡/

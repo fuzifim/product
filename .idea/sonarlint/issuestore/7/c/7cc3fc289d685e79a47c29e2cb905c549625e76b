@@ -1,0 +1,7 @@
+
+U	php:S1105";Move this open curly brace to the end of the previous line.(ÒÌâ–øÿÿÿÿ
+U	php:S1105&";Move this open curly brace to the end of the previous line.(ÒÌâ–øÿÿÿÿ
+U	php:S1105	";Move this open curly brace to the end of the previous line.(ÒÌâ–øÿÿÿÿ
+;	php:S2003)"&Replace "require" with "require_once".(—¿·‡
+8php:S125"Remove this commented out code.(ÝÈ‹çÿÿÿÿÿ
+a	php:S4833)"LReplace "require" with namespace import mechanism through the "use" keyword.(—¿·‡
