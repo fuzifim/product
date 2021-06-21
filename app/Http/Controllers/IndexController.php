@@ -49,7 +49,7 @@ class IndexController extends Controller
             if(!empty($getJob->domain) && $getJob->page<=$getJob->limit_page){
                 DB::table('site_url')
                     ->where('id', $getJob->id)
-                    ->update(['page' => 2]);
+                    ->update(['page' => $getJob->page+1]);
                 $response = $client->request('GET', 'https://api.accesstrade.vn/v1/datafeeds?limit=50&domain='.$getJob->domain.'&page='.$getJob->page,
                     [
                         'headers' => [
