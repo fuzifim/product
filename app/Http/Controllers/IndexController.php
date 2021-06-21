@@ -58,7 +58,7 @@ class IndexController extends Controller
                         ]
                     ]
                 );
-                echo $response->getBody()->getContents();
+//                echo $response->getBody()->getContents();
                 $responseDecode=json_decode($response->getBody()->getContents());
                 dd($responseDecode);
                 if(!empty($responseDecode->data) && $responseDecode->data>0){
