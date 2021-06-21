@@ -47,9 +47,9 @@ class IndexController extends Controller
             $getJob=DB::table('site_url')->where('status','active')->first();
             echo $getJob->page;
             if(!empty($getJob->domain) && $getJob->page<=$getJob->limit_page){
-//                DB::table('site_url')
-//                    ->where('id', $getJob->id)
-//                    ->update(['page' => $getJob->page+1]);
+                DB::table('site_url')
+                    ->where('id', $getJob->id)
+                    ->update(['page' => $getJob->page+1]);
                 $response = $client->request('GET', 'https://api.accesstrade.vn/v1/datafeeds?limit=50&domain='.$getJob->domain.'&page='.$getJob->page,
                     [
                         'headers' => [
@@ -60,7 +60,7 @@ class IndexController extends Controller
                 );
 //                echo $response->getBody()->getContents();
                 $responseDecode=json_decode($response->getBody()->getContents());
-                dd($responseDecode);
+//                dd($responseDecode);
                 if(!empty($responseDecode->data) && $responseDecode->data>0){
                     foreach($responseDecode->data as $campaign){
                         $name = Str::limit($campaign->name,250);
