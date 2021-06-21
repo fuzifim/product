@@ -58,9 +58,9 @@ class IndexController extends Controller
                         ]
                     ]
                 );
-                echo $response->getBody()->getContents(); 
+                echo $response->getBody()->getContents();
                 $responseDecode=json_decode($response->getBody()->getContents());
-                if($responseDecode->data>0){
+                if(!empty($responseDecode->data) && $responseDecode->data>0){
                     foreach($responseDecode->data as $campaign){
                         $name = Str::limit($campaign->name,250);
                         $checkProduct=DB::table('products')
@@ -96,9 +96,10 @@ class IndexController extends Controller
                         }
                     }
                 }else{
-                    DB::table('site_url')
-                        ->where('id', $getJob->id)
-                        ->update(['status' => 'disable']);
+                    echo 'khong lay duoc du lieu';
+//                    DB::table('site_url')
+//                        ->where('id', $getJob->id)
+//                        ->update(['status' => 'disable']);
                 }
             }else if($getJob->page > $getJob->limit_page){
                 DB::table('site_url')
