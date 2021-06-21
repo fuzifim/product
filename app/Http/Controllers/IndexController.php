@@ -45,6 +45,7 @@ class IndexController extends Controller
                 'timeout' => '50'
             ]);
             $getJob=DB::table('site_url')->where('status','active')->first();
+            echo $getJob->page;
             if(!empty($getJob->domain) && $getJob->page<=$getJob->limit_page){
                 DB::table('site_url')
                     ->where('id', $getJob->id)
