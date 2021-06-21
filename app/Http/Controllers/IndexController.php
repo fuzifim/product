@@ -60,6 +60,7 @@ class IndexController extends Controller
                 );
                 echo $response->getBody()->getContents();
                 $responseDecode=json_decode($response->getBody()->getContents());
+                dd($responseDecode->data);
                 if(!empty($responseDecode->data) && $responseDecode->data>0){
                     foreach($responseDecode->data as $campaign){
                         $name = Str::limit($campaign->name,250);
