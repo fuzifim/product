@@ -58,6 +58,7 @@ class IndexController extends Controller
                         ]
                     ]
                 );
+                echo $response->getBody()->getContents(); 
                 $responseDecode=json_decode($response->getBody()->getContents());
                 if($responseDecode->data>0){
                     foreach($responseDecode->data as $campaign){
